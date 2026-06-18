@@ -14,7 +14,7 @@ const MainLayout = () => {
     if (!token) return;
     const fetchUserRole = async () => {
       try {
-        const res = await axios.get('http://localhost:8000/api/auth/me/', {
+        const res = await axios.get(`${import.meta.env.VITE_API_URL || "http://localhost:8000"}/api/auth/me/`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         setIsStaff(res.data.is_staff);

@@ -20,7 +20,7 @@ const AdminManage = () => {
   const fetchUsers = async () => {
     try {
       const token = localStorage.getItem('access_token');
-      const response = await axios.get('http://localhost:8000/api/auth/users/', {
+      const response = await axios.get(`${import.meta.env.VITE_API_URL || "http://localhost:8000"}/api/auth/users/`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setUsers(response.data);
@@ -36,7 +36,7 @@ const AdminManage = () => {
     if (!window.confirm('Are you sure you want to delete this user?')) return;
     try {
       const token = localStorage.getItem('access_token');
-      await axios.delete(`http://localhost:8000/api/auth/users/${id}/`, {
+      await axios.delete(`${import.meta.env.VITE_API_URL || "http://localhost:8000"}/api/auth/users/${id}/`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setUsers(users.filter(user => user.id !== id));

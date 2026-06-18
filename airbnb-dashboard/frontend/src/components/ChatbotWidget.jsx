@@ -31,7 +31,7 @@ const ChatbotWidget = () => {
     try {
       // In production, you would attach the JWT token here
       const token = localStorage.getItem('access_token');
-      const response = await axios.post('http://localhost:8000/api/chat/', {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL || "http://localhost:8000"}/api/chat/`, {
         question: userMessage
       }, {
         headers: { Authorization: `Bearer ${token}` }

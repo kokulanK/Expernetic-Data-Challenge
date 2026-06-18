@@ -36,7 +36,7 @@ const Prediction = () => {
       const token = localStorage.getItem('access_token');
       const config = token ? { headers: { Authorization: `Bearer ${token}` } } : {};
       
-      const res = await axios.post('http://localhost:8000/api/predictions/', formData, config);
+      const res = await axios.post(`${import.meta.env.VITE_API_URL || "http://localhost:8000"}/api/predictions/`, formData, config);
       setResult(res.data);
     } catch (err) {
       console.error(err);
@@ -50,7 +50,7 @@ const Prediction = () => {
     try {
       const token = localStorage.getItem('access_token');
       const config = token ? { headers: { Authorization: `Bearer ${token}` }, responseType: 'blob' } : { responseType: 'blob' };
-      const response = await axios.get(`http://localhost:8000/api/report/?prediction_id=${predictionId}`, config);
+      const response = await axios.get(`${import.meta.env.VITE_API_URL || "http://localhost:8000"}/api/report/?prediction_id=${predictionId}`, config);
       const url = window.URL.createObjectURL(new Blob([response.data]));
       const link = document.createElement('a');
       link.href = url;

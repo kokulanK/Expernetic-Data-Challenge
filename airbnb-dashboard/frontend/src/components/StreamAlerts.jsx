@@ -8,7 +8,7 @@ const StreamAlerts = () => {
   const fetchAlerts = async () => {
     try {
       const token = localStorage.getItem('access_token');
-      const response = await axios.get('http://localhost:8000/api/stream-alerts/', {
+      const response = await axios.get(`${import.meta.env.VITE_API_URL || "http://localhost:8000"}/api/stream-alerts/`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       // Prepend new alerts so latest appears first, cap at 10
