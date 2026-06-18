@@ -18,7 +18,13 @@ def seed():
     password = 'admin123'
     email = 'admin@example.com'
     
-    user, created = User.objects.get_or_create(username=username, defaults={'email': email})
+    user, created = User.objects.get_or_create(username=username, defaults={
+        'email': email,
+        'is_staff': True,
+        'is_superuser': True
+    })
+    user.is_staff = True
+    user.is_superuser = True
     user.set_password(password)
     user.save()
     if created:
