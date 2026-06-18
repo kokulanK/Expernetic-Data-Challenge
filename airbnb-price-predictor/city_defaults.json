@@ -1,0 +1,12 @@
+{
+  "London": {
+    "nbhd_median_price": 126.0,
+    "nbhd_listing_density": 5190.0,
+    "host_tenure_years": 8.58
+  },
+  "New York": {
+    "nbhd_median_price": 171.74,
+    "nbhd_listing_density": 638.0,
+    "host_tenure_years": NaN
+  }
+}

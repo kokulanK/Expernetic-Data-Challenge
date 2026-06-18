@@ -1,0 +1,22 @@
+{
+  "numeric": [
+    "accommodates",
+    "bedrooms",
+    "bathrooms",
+    "beds",
+    "minimum_nights",
+    "number_of_reviews",
+    "review_scores_rating",
+    "availability_365",
+    "host_tenure_years",
+    "nbhd_median_price",
+    "nbhd_listing_density",
+    "calculated_host_listings_count"
+  ],
+  "categorical": [
+    "city",
+    "room_type_clean",
+    "property_type_bucket",
+    "host_portfolio_type"
+  ]
+}

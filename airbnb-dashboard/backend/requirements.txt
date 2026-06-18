@@ -1,0 +1,13 @@
+django>=5.0,<6.0
+djangorestframework
+django-cors-headers
+drf-yasg
+python-dotenv
+requests
+djangorestframework-simplejwt
+dj-database-url
+reportlab
+gradio-client
+gunicorn
+psycopg2-binary
+whitenoise
