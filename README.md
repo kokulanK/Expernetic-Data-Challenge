@@ -9,7 +9,9 @@
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
 [![Notebook](https://img.shields.io/badge/Notebook-Colab-F9AB00?style=flat-square&logo=googlecolab&logoColor=white)](./Expernetic_Notebook.ipynb)
 
-**Author:** Kokulan Kugathasan · [GitHub](https://github.com/kokulanK) · [LinkedIn](https://linkedin.com/in/kokulan-kugathasan)
+**Author:** Kokulan Kugathasan 
+· [GitHub](https://github.com/kokulanK) 
+· [LinkedIn](https://linkedin.com/in/kokulan-kugathasan)
 
 [Live Dashboard](https://expernetic-data-challenge.vercel.app/) 
 
@@ -53,15 +55,15 @@ Render's free tier spins down on inactivity — first request after idle may tak
 
 ```
 .
-├── Expernetic_Notebook.ipynb     # End-to-end analysis (Sections 1-13, see below)
-├── frontend/                     # React/Vite dashboard (deployed to Vercel)
-├── backend/                      # API service (deployed to Render)
-├── reports/                      # Final PDF report + supporting docs
-├── outputs/
-│   ├── data/                     # master_listings.parquet, expernetic_airbnb.duckdb
-│   ├── figures/                  # Exported chart images
-│   └── models/                   # price_model.joblib + feature metadata
-└── README.md
+Expernetic-Data-Challenge/
+├── airbnb-dashboard/
+├── airbnb-price-predictor/
+├── .gitignore
+├── Expernetic_Notebook.ipynb
+├── README.md
+├── Talent Assessment Program.pdf
+├── error.txt
+└── push_log.txt
 ```
 
 *(Adjust the tree above to match your actual folder names before committing — see [Notes](#notes-before-you-push) below.)*
@@ -163,14 +165,3 @@ The full written report — Executive Summary, Methodology, Engineering Approach
 AI tools (Claude, ChatGPT) were used throughout this assignment for code review, debugging, and drafting analytical narrative — consistent with Expernetic's stated AI usage policy. Full disclosure (tools used, AI-assisted sections, key prompts, validation steps, and rejected suggestions) is documented in **Appendix A of the PDF report**.
 
 ---
-
-## Notes Before You Push
-
-A few things worth tightening before this goes live on GitHub, since I don't have visibility into your actual folder layout or repo state:
-
-- **Folder names**: I guessed `frontend/`, `backend/`, `reports/`, `outputs/` — swap these for your real top-level folders so the tree above isn't fiction.
-- **Frontend/backend stack labels**: I described the deployment generically (React/Vite + API) based on the Vercel/Render split — confirm the actual frameworks if you want them named specifically (e.g. if it's Streamlit-on-Render instead of a custom API, that changes the wording).
-- **Credentials**: Confirm no Drive paths, API keys, or personal tokens are hardcoded anywhere in the notebook before pushing (Section 13 reads from Colab Secrets — good — but double-check nothing else leaked in during dev).
-- **Report PDF**: Make sure it's actually committed under whatever path you reference in the README.
-
-Happy to redo the structure/stack section once you confirm the real layout — just paste your repo's actual top-level folder names.
